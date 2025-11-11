@@ -11,6 +11,7 @@ Alexander Bean, 100927087
 + Enemy jumps between buildings
 + Player is able to swap weapons once obtained
 + Game Ends 3 seconds after picking up the sword on the lower level
+  + denoted by the "Start Coroutine" in console
 + Added birds that fly around the map on a spline
 + Changed time of day to afternoon
 
