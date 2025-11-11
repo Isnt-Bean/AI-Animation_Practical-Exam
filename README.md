@@ -26,3 +26,4 @@ Alexander Bean, 100927087
   + no jump animation
   + no attack animation 
 + Player jumping from buildings using navmesh link
+  + navmesh link was usable by the zombie
