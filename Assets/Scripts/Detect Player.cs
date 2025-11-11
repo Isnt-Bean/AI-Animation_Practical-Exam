@@ -11,4 +11,12 @@ public class DetectPlayer : MonoBehaviour
             searchForPlayer = true;
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Zombie")
+        {
+            searchForPlayer = false;
+        }
+    }
 }
