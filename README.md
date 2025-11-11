@@ -1,5 +1,7 @@
 # AI-Animation_Practical-Exam
 Alexander Bean, 100927087
+
+[GamePlay Footage](https://youtu.be/oyj6io7ThVY) 
 ## What I've Done
 + Added a way to control the player (WASD)
 + Added a walking animation
