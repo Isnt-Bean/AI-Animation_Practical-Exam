@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class DetectPlayer : MonoBehaviour
 {
-    void OnTriggerStay(Collider collision)
+    public bool searchForPlayer = false;
+    
+    void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.tag == "Zombie")
         {
-            print(collision.gameObject.name);
+            searchForPlayer = true;
         }
     }
 }

@@ -7,6 +7,8 @@ public class NavMeshController : MonoBehaviour
     public GameObject Target;
     private NavMeshAgent agent;
 
+    public DetectPlayer dp;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -14,8 +16,15 @@ public class NavMeshController : MonoBehaviour
     }
     void Update()
     {
-
-        agent.destination = Target.transform.position;
+        //make this activate when in sphere
+        if (dp.searchForPlayer)
+        {
+            agent.destination = Target.transform.position;
+        }
+        else
+        {
+            //walk the way points
+        }
 
     }
 
@@ -23,7 +32,7 @@ public class NavMeshController : MonoBehaviour
     {
         if (other.name == "Target")
         {
-            //edit here
+            agent.speed = 3.5f;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -31,6 +40,7 @@ public class NavMeshController : MonoBehaviour
         if (other.name == "Target")
         {           
             //edit here
+            
         }
     }
 
