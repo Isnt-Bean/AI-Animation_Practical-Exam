@@ -73,7 +73,7 @@ AnimatorState:
   m_Motion: {fileID: 7400000, guid: 1fd9b45b952e61844836d85da6a62f36, type: 2}
   m_Tag: 
   m_SpeedParameter: 
-  m_MirrorParameter: 
+  m_MirrorParameter: IsAttacking
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 --- !u!1107 &-1578913911697800059
@@ -105,7 +105,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsAttacking
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -166,9 +169,9 @@ AnimatorController:
     m_Mask: {fileID: 31900000, guid: b588a732b182bac499b65c00eda3f915, type: 2}
     m_Motions: []
     m_Behaviours: []
-    m_BlendingMode: 0
+    m_BlendingMode: 1
     m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
+    m_DefaultWeight: 0.44
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}

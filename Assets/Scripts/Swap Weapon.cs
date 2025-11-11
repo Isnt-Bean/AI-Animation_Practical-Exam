@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SwapWeapon : MonoBehaviour
 {
@@ -71,7 +72,7 @@ public class SwapWeapon : MonoBehaviour
             print("Has Axe");
             hasAxe = true;
             Axe.SetActive(true);
-            hasSword = false;
+            Sword.SetActive(false);
         }
 
         if (other.tag == "Sword")
@@ -80,7 +81,15 @@ public class SwapWeapon : MonoBehaviour
             print("Has Sword");
             hasSword = true;
             Sword.SetActive(true);
-            hasAxe = false;
+            Axe.SetActive(false);
+            StartCoroutine(Wait());
         }
+    }
+    
+    IEnumerator Wait()
+    {
+        print("Start Coroutine");
+        yield return new WaitForSeconds(3);
+        Application.Quit();
     }
 }
